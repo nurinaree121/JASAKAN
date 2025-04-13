@@ -12,5 +12,11 @@ const colors = {
     darkGreen: (opacity = 1) => `rgba(106, 141, 115, ${opacity})`,
     lightGreen: (opacity = 1) => `rgba(244, 253, 217, ${opacity})`,
 
+
+    darkYellow: (opacity = 1) => `rgba(204, 204, 0, ${opacity})`,
+    orangeYellow: (opacity = 1) => `rgba(255, 165, 0, ${opacity})`,
+    warmYellow: (opacity = 1) => `rgba(255, 200, 0, ${opacity})`,
+    deepOrangeYellow: (opacity = 1) => `rgba(218, 140, 0, ${opacity})`,
+
 }
 export default colors;
