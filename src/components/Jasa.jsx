@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, View, Image, Text, StyleSheet } from 'react-native';
 import { colors } from '../theme';
-import { Box, Message } from 'iconsax-react-native';
+import { Box, DollarCircle, Message } from 'iconsax-react-native';
 
 
 const JasaList = ({dataJasa}) => {
@@ -21,12 +21,12 @@ const JasaList = ({dataJasa}) => {
             </View>
             <View style={styles.cardInfo}>
               <View style={styles.stockContainer}>
-                <Box size={10} color={colors.white()} />
-                <Text style={styles.cardText}>Stok = {item.stok}</Text>
+                <DollarCircle size={13} color={colors.black()} />
+                <Text style={styles.cardText}>{item.harga}</Text>
               </View>
               <View style={styles.reviewContainer}>
-                <Message size={10} color={colors.white()} />
-                <Text style={styles.cardText}>Review = {item.review}</Text>
+                <Message size={10} color={colors.black()} />
+                <Text style={styles.cardText}>Review : {item.review}</Text>
               </View>
             </View>
           </View>
@@ -42,7 +42,7 @@ export default JasaList;
 const styles = StyleSheet.create({
     cardItem: {
       flexDirection: 'row',
-      backgroundColor: colors.darkGreen(),
+      backgroundColor: colors.deepOrangeYellow(),
       marginBottom: 10,
       padding: 10,
       borderRadius: 10,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     cardCategory: {
       fontSize: 12,
-      color: colors.white(),
+      color: colors.black(),
     },
     cardTitle: {
       fontSize: 16,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     },
     cardText: {
       fontSize: 12,
-      color: colors.white(),
+      color: colors.black(),
     },
     flatListContainer: {
       paddingBottom: 20,

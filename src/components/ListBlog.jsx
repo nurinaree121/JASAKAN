@@ -36,6 +36,7 @@ const ListBlog = ({ blogData }) => {
     cardItem: {
       width: 280,
       marginHorizontal: 10,
+      marginBottom : 110,
     },
     cardImage: {
       width: '100%',

@@ -4,68 +4,73 @@ import { fontType, colors } from './theme';
 
 export const blogData = [
     {
-      title: 'Aksi Bersih Pantai di Tanjung Bayang',
+      title: 'Home Cleaning Service',
       date: 'Nov 10, 2023',
-      image: 'https://i.pinimg.com/474x/62/1e/7f/621e7f063c8f919a6b6b38bae402ac14.jpg',
+      image: 'https://gemilang.co.id/wp-content/uploads/2024/05/Jenis-Cleaning-Service_-Pengertian-dan-Daftar-Tugasnya.webp',
     },
     {
-      title: 'Kegiatan Tanam Pohon Bersama Komunitas',
+      title: 'Service Mobil dan Motor',
       date: 'Nov 10, 2023',
-      image: 'https://i.pinimg.com/474x/75/76/14/757614a938d3462d1d495b48c3ba6525.jpg',
+      image: 'https://moladin.com/blog/wp-content/uploads/2021/04/moladin-tips-mudik-01.jpg',
     },
     {
-      title: 'Edukasi Pengolahan Sampah Rumah Tangga',
+      title: 'Service Kulkas, Tv, AC, dll',
       date: 'Nov 10, 2023',
-      image: 'https://i.pinimg.com/474x/21/04/6e/21046eb75c410bdae1c13c772b83a910.jpg',
+      image: 'https://aminahstore.com/wp-content/uploads/2018/09/1-7.jpg',
+    },
+    {
+      title: 'Pembuatan Almari, kursi, meja, dll',
+      date: 'Nov 10, 2023',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdJo6qow2GDE-EOoslCmiFG-qM9ACXwJwNg&s',
     },
   ];
   
   export const dataJasa = [
     {
       id: '1',
-      category: 'Kantong Plastik',
-      title: 'Kantong Plastik 1kg',
+      category: 'Pemrograman',
+      title: 'Pembuatan Website',
       harga: 'Rp.100K-Rp.200K',
-      review: 89,
-      image: 'https://i.pinimg.com/474x/c0/b6/bf/c0b6bf279322ee25c716157578d7a6c1.jpg',
+      review: 99,
+      image: 'https://kuliahkaryawan.net/images/blog/da85f03959ba58d0c22d16cf089f3ea8.jpg',
     },
     {
       id: '2',
-      category: 'Kantong Plastik',
-      title: 'Kantong Plastik 1kg',
+      category: 'Rumah Tangga',
+      title: 'Antar Jemput Anak',
       harga: 'Rp.100K-Rp.200K',
-      review: 89,
-      image: 'https://i.pinimg.com/474x/c0/b6/bf/c0b6bf279322ee25c716157578d7a6c1.jpg',
+      review: 88,
+      image: 'https://ik.imagekit.io/carro/jualo/original/39089155/image_20230728-19772-1khsfwz.jpg?v=1690480099',
     },
     {
       id: '3',
-      category: 'Kantong Plastik',
-      title: 'Kantong Plastik 1kg',
+      category: 'Pertukangan',
+      title: 'Pembuatan Almari, kursi, meja, dll',
       harga: 'Rp.100K-Rp.200K',
       review: 89,
-      image: 'https://i.pinimg.com/474x/c0/b6/bf/c0b6bf279322ee25c716157578d7a6c1.jpg',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdJo6qow2GDE-EOoslCmiFG-qM9ACXwJwNg&shttps://i.pinimg.com/474x/c0/b6/bf/c0b6bf279322ee25c716157578d7a6c1.jpg',
     },
     {
       id: '4',
-      category: 'Kantong Plastik',
-      title: 'Kantong Plastik 1kg',
+      category: 'Jasa Elektronik',
+      title: 'Service Kulkas, Tv, AC, dll',
       harga: 'Rp.100K-Rp.200K',
-      review: 89,
-      image: 'https://i.pinimg.com/474x/c0/b6/bf/c0b6bf279322ee25c716157578d7a6c1.jpg',
+      review: 90,
+      image: 'https://aminahstore.com/wp-content/uploads/2018/09/1-7.jpg',
     },
     {
       id: '5',
-      category: 'Kantong Plastik',
-      title: 'Kantong Plastik 1kg',
+      category: 'Jasa Otomotif',
+      title: 'Service Mobil dan Motor',
       harga: 'Rp.100K-Rp.200K',
-      review: 89,
-      image: 'https://i.pinimg.com/474x/c0/b6/bf/c0b6bf279322ee25c716157578d7a6c1.jpg',
+      review: 115,
+      image: 'https://moladin.com/blog/wp-content/uploads/2021/04/moladin-tips-mudik-01.jpg',
     },
   
   ];
 
   export const categories = [
-    { id: '1', title: 'Terlaris' },
-    { id: '2', title: 'Terbaru' },
-    { id: '3', title: 'Diskon' },
+    { id: '1', title: 'Jasa Elektronik' },
+    { id: '2', title: 'Jasa Otomotif' },
+    { id: '3', title: 'Jasa Rumah Tangga' },
   ];
