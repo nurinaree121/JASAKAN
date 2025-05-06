@@ -1,9 +1,13 @@
 import React from 'react';
 import {View, Text, ScrollView, StyleSheet, Image, TouchableOpacity, ImageBackground} from 'react-native';
+import { Edit } from 'iconsax-react-native';
 import {blogData} from '../../data';
 import {fontType, colors} from '../../theme';
+import {ItemSmall} from '../../components';
+import {useNavigation} from '@react-navigation/native';
 
 const Akun = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView style={styles.container}>
       {/* Header Profile */}
@@ -12,8 +16,8 @@ const Akun = () => {
           source={{uri: 'https://i.pinimg.com/originals/f9/d3/1f/f9d31ffb4ad0917ce22b21bfd5cee220.jpg'}}
           style={styles.profileImage}
         />
-        <Text style={styles.profileName}>rena</Text>
-        <Text style={styles.profileEmail}>renaer@gmail.com</Text>
+        <Text style={styles.profileName}>Rena</Text>
+        <Text style={styles.profileEmail}>renaerr@gmail.com</Text>
         
         <TouchableOpacity style={styles.editButton}>
           <Text style={styles.editButtonText}>Edit Profile</Text>
@@ -21,8 +25,8 @@ const Akun = () => {
       </View>
 
       {/* Rekomendasi Kegiatan */}
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionTitle}>Rekomendasi Promo Jasa</Text>
+      <TouchableOpacity style={styles.sectionContainer}>
+        <Text style={styles.sectionTitle}>Rekomendasi Promo</Text>
         <ScrollView contentContainerStyle={styles.blogList}>
           {blogData.map((blog, index) => (
             <View key={index} style={styles.blogItem}>
@@ -38,7 +42,7 @@ const Akun = () => {
             </View>
           ))}
         </ScrollView>
-      </View>
+      </TouchableOpacity>
     </ScrollView>
   );
 };
@@ -124,6 +128,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.white(0.8),
     fontFamily: fontType['Poppins-Regular'],
-  },
+  },  
 });
+
 export default Akun;

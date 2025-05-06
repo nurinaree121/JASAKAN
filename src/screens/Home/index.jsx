@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
-import { SearchNormal,  Global } from 'iconsax-react-native';
+import { SearchNormal } from 'iconsax-react-native';
 import { CategoryList, ListBlog,JasaList } from '../../components';
 import { blogData, dataJasa, categories } from '../../data';
 import { fontType, colors } from '../../theme';

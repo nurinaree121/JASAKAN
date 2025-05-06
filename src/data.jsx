@@ -1,27 +1,47 @@
 import { Home, Category, Shop, Message } from "iconsax-react-native";
 import { fontType, colors } from './theme';
 
-
 export const blogData = [
-    {
-      title: 'Home Cleaning Service',
+  {
+    id: 1,
+    title: 'Home Cleaning Service',
+    description: 'Kegiatan membersihkan area pesisir pantai bersama relawan dari berbagai komunitas peduli lingkungan.',
+    uploadDate: 'Nov 10, 2023',
+    eventDate: 'Nov 18, 2023',
+    location: 'Pantai Tanjung Bayang, Makassar',
+    quota: 100,
+    registered: 75,
+    image: 'https://gemilang.co.id/wp-content/uploads/2024/05/Jenis-Cleaning-Service_-Pengertian-dan-Daftar-Tugasnya.webp',
+    totalComments: 12,
+  },
+  {
+    id: 2,
+    title: 'Service Kulkas, Tv, AC, dll',
+    description: 'Penanaman pohon bersama untuk menghijaukan kembali area terbuka di sekitar Hutan Kota.',
+    uploadDate: 'Nov 10, 2023',
+    eventDate: 'Nov 25, 2023',
+    location: 'Hutan Kota, Jakarta Selatan',
+    quota: 150,
+    registered: 120,
+    image: 'https://aminahstore.com/wp-content/uploads/2018/09/1-7.jpg',
+    totalComments: 20,
+  },
+    /* {
+      title: 'Sosialisasi Pembuatan Kompos Sampah Organik',
       date: 'Nov 10, 2023',
-      image: 'https://gemilang.co.id/wp-content/uploads/2024/05/Jenis-Cleaning-Service_-Pengertian-dan-Daftar-Tugasnya.webp',
-    },
+      image: 'https://i.pinimg.com/736x/a4/05/6c/a4056c10650fc5aa930fa29cb0522ba7.jpg',
+    }, */
     {
-      title: 'Service Mobil dan Motor',
-      date: 'Nov 10, 2023',
-      image: 'https://moladin.com/blog/wp-content/uploads/2021/04/moladin-tips-mudik-01.jpg',
-    },
-    {
-      title: 'Service Kulkas, Tv, AC, dll',
-      date: 'Nov 10, 2023',
-      image: 'https://aminahstore.com/wp-content/uploads/2018/09/1-7.jpg',
-    },
-    {
+      id: 3,
       title: 'Pembuatan Almari, kursi, meja, dll',
-      date: 'Nov 10, 2023',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdJo6qow2GDE-EOoslCmiFG-qM9ACXwJwNg&s',
+      description: 'Penanaman pohon bersama untuk menghijaukan kembali area terbuka di sekitar Hutan Kota.',
+      uploadDate: 'Nov 10, 2023',
+      eventDate: 'Nov 25, 2023',
+      location: 'Hutan Kota, Jakarta Selatan',
+      quota: 150,
+      registered: 120,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVdJo6qow2GDE-EOoslCmiFG-qM9ACXwJwNg&shttps://i.pinimg.com/736x/a4/05/6c/a4056c10650fc5aa930fa29cb0522ba7.jpg',
+      totalComments: 20,
     },
   ];
   
@@ -31,7 +51,7 @@ export const blogData = [
       category: 'Pemrograman',
       title: 'Pembuatan Website',
       harga: 'Rp.100K-Rp.200K',
-      review: 99,
+      review: 89,
       image: 'https://kuliahkaryawan.net/images/blog/da85f03959ba58d0c22d16cf089f3ea8.jpg',
     },
     {
@@ -66,11 +86,26 @@ export const blogData = [
       review: 115,
       image: 'https://moladin.com/blog/wp-content/uploads/2021/04/moladin-tips-mudik-01.jpg',
     },
+  ];
   
+  export const categories = [
+    { id: '1', title: 'Jasa Otomotif' },
+    { id: '2', title: 'Jasa Rumah Tangga' },
+    { id: '3', title: 'Jasa Elektronik' },
   ];
 
-  export const categories = [
-    { id: '1', title: 'Jasa Elektronik' },
-    { id: '2', title: 'Jasa Otomotif' },
-    { id: '3', title: 'Jasa Rumah Tangga' },
+  export const menuItems = [
+    { id: '1', title: 'Beranda', icon: <Home size={24} color={colors.white()} /> },
+    { id: '2', title: 'Jasa', icon: <Category size={24} color={colors.white()} /> },
+    { id: '3', title: 'Promo', icon: <Shop size={24} color={colors.white()} /> },
   ];
+
+  export const ProfileData = {
+    profilePict:
+      'https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+    name: 'Arthur Conan Doyle',
+    createdAt: '18 Mar, 2020',
+    blogPosted: 29,
+    following: 3000,
+    follower: 3000,
+  };

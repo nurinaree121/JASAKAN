@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { ScrollView, View, ImageBackground, Text, StyleSheet, TextInput } from 'react-native';
+import { ScrollView, View, ImageBackground, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { Edit } from 'iconsax-react-native';
 import { fontType, colors } from '../../theme';
 import { blogData } from '../../data';
+import { useNavigation } from '@react-navigation/native';
 
 const ItemPromo = () => {
+  const navigation = useNavigation();
   const [searchQuery, setSearchQuery] = useState('');
   
   const filteredData = blogData.filter(item =>
@@ -11,23 +14,28 @@ const ItemPromo = () => {
   );
 
   return (
+    <View style={styles.wrapper}>
     <ScrollView 
       showsVerticalScrollIndicator={false} 
-      style={{backgroundColor: colors.white()}}
+      style={{backgroundColor: colors.lightGreen()}}
       contentContainerStyle={styles.listBlog}
     >
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Promo Jasa</Text>
+        <Text style={styles.headerTitle}>Kegiatan Komunitas</Text>
         <TextInput
           style={styles.searchBar}
-          placeholder="Cari jasa..."
+          placeholder="Cari kegiatan..."
           placeholderTextColor={colors.black(0.6)}
           value={searchQuery}
           onChangeText={setSearchQuery}
         />
       </View>
       {filteredData.map((blog, index) => (
-        <View key={index} style={styles.cardItem}>
+        <TouchableOpacity 
+          key={index} 
+          style={styles.cardItem}
+          onPress={() => navigation.navigate('DetailKomunitas', { communityId: blog.id })}
+        >
           <ImageBackground
             style={styles.cardImage}
             resizeMode="cover"
@@ -40,9 +48,15 @@ const ItemPromo = () => {
               </View>
             </View>
           </ImageBackground>
-        </View>
+        </TouchableOpacity>
       ))}
     </ScrollView>
+    <TouchableOpacity
+            style={styles.floatingButton}
+            onPress={() => navigation.navigate('AddKomunitasForm')}>
+            <Edit color={colors.white()} variant="Linear" size={20} />
+          </TouchableOpacity>
+    </View>
   );
 };
 
@@ -56,7 +70,6 @@ const styles = StyleSheet.create({
     fontFamily: fontType['Poppins-Bold'],
     color: colors.black(),
     marginBottom: 15,
-    textAlign : 'center',
   },
   searchBar: {
     backgroundColor: colors.warmYellow(),
@@ -102,6 +115,26 @@ const styles = StyleSheet.create({
     color: colors.white(),
     marginTop: 5,
     fontFamily: fontType['Poppins-Regular'],
+  },
+  floatingButton: {
+    backgroundColor: colors.warmYellow(),
+    padding: 15,
+    position: 'absolute',
+    bottom: 24,
+    right: 24,
+    borderRadius: 10,
+    shadowColor: colors.lightGreen(),
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4.65,
+
+    elevation: 8,
+  },
+  wrapper: {
+    flex: 1,
   },
 });
 
